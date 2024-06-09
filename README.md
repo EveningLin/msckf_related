@@ -1,4 +1,4 @@
-# msckf_related
+![image](https://github.com/EveningLin/msckf_related/assets/110521494/2803020f-d5c3-4b87-b620-b1ab8ed7479d)# msckf_related
 msckf_related将会收录我对msckf的注释版和改进，可能存在谬误，还请大佬多加指正
 ## 一. msckf_commended注释版
 参考代码 ：[宾大Vijay Kumar实验室开源的双目版本MSCKF算法](https://github.com/KumarRobotics/msckf_vio) 
@@ -6,7 +6,7 @@ msckf_related将会收录我对msckf的注释版和改进，可能存在谬误�
 ### 1.2 后端
 核心观点：系统状态 不一定等同于 滤波器状态
 具体的说，在这个系统中
-下图取自[邱笑晨的解释]( https://www.bilibili.com/video/BV1Y4411g7FJ/?vd_source=0ada5c95f58cb319a77c62f35a4c0057)
+下图取自[邱笑晨的解释](https://www.bilibili.com/video/BV1Y4411g7FJ/?vd_source=0ada5c95f58cb319a77c62f35a4c0057)
 ![image](https://github.com/EveningLin/msckf_related/assets/110521494/519f889c-b1f9-456b-9df3-1a84405347ee)
 
 
@@ -17,14 +17,25 @@ _更新阶段_
 
 重投影误差中包含了相机位姿和特征点，但是在滤波器方程中实际上是不包含特征点的，所以通过乘上左零空间消除特征点。
 
-左零空间：矩阵A的左零空间就是矩阵A^T的零空间
+· 左零空间：矩阵A的左零空间就是矩阵A^T的零空间
 
-消去过程：
+· 消去过程：
 
-怎么找到左零空间：
+· 怎么找到左零空间：利用svd中Σ的零奇异值
+
+【延申】如何证明svd中Σ的零奇异值对应的U就是左零空间呢
+具体来说，H_fj 被分解成了 U * Σ * V^T 的形式，如果 (H) 的秩是 (r)行数是（m），那么 (Σ) 的前 (r) 个对角元素是非零的，而后面的元素都是零。考虑 (U) 的最后 (m - r) 列（即 (U) 的右列），这些列对应的奇异值都是零。由于 (U) 是正交矩阵，这些列在行空间中是正交的，并且它们张成了一个与 (H) 的行空间正交的子空间。因此，这些列（或者它们的线性组合）可以近似看作是 (H) 的左零空间的一个基。
+
+【延申】具体步骤
+![image](https://github.com/EveningLin/msckf_related/assets/110521494/520b8f8a-b69d-4bd5-bad8-809c6578ee16)
 
 
 (3)为什么要对H_x进行QR分解？
 
 为了对H_x进一步降低维度
 【延申】怎么证明等价性？
+### 1.3 可观性修正
+可观性修正有两种不同的和新方法，分别是FEJ和OCKF
+FEJ参考论文
+OCKF参考论文：[2012-TR: Observability-constrained Vision-aided Inertial Navigation]()
+
