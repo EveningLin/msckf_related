@@ -1,4 +1,4 @@
-![image](https://github.com/EveningLin/msckf_related/assets/110521494/2803020f-d5c3-4b87-b620-b1ab8ed7479d)# msckf_related
+# msckf_related
 msckf_related将会收录我对msckf的注释版和改进，可能存在谬误，还请大佬多加指正
 ## 一. msckf_commended注释版
 参考代码 ：[宾大Vijay Kumar实验室开源的双目版本MSCKF算法](https://github.com/KumarRobotics/msckf_vio) 
