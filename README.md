@@ -27,15 +27,29 @@ _更新阶段_
 具体来说，H_fj 被分解成了 U * Σ * V^T 的形式，如果 (H) 的秩是 (r)行数是（m），那么 (Σ) 的前 (r) 个对角元素是非零的，而后面的元素都是零。考虑 (U) 的最后 (m - r) 列（即 (U) 的右列），这些列对应的奇异值都是零。由于 (U) 是正交矩阵，这些列在行空间中是正交的，并且它们张成了一个与 (H) 的行空间正交的子空间。因此，这些列（或者它们的线性组合）可以近似看作是 (H) 的左零空间的一个基。
 
 【延申】具体步骤
-![image](https://github.com/EveningLin/msckf_related/assets/110521494/520b8f8a-b69d-4bd5-bad8-809c6578ee16)
 
+![image](https://github.com/EveningLin/msckf_related/assets/110521494/520b8f8a-b69d-4bd5-bad8-809c6578ee16)
 
 (3)为什么要对H_x进行QR分解？
 
 为了对H_x进一步降低维度
 【延申】怎么证明等价性？
+
 ### 1.3 可观性修正
 可观性修正有两种不同的和新方法，分别是FEJ和OCKF
 FEJ参考论文
 OCKF参考论文：[2012-TR: Observability-constrained Vision-aided Inertial Navigation]()
+#### 1.3.1 前置知识
+（1）可观性
+
+这个系统在进行状态估计时，哪些自由度是可以被估计出来的。
+
+能观性通过Observability Matrix（能观性矩阵）体现，系统Unobservable的状态维数是这个矩阵零空间的维数。
+
+【延申】对于视觉惯性slam,什么样的运动使系统可观性退化，什么样的运动使其可观性增强？
+
+
+
+#### 1.3.2 First Estimate Jacobian （FEJ）
+
 
