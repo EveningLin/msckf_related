@@ -49,7 +49,30 @@ OCKF参考论文：[2012-TR: Observability-constrained Vision-aided Inertial Nav
 
 【延申】对于视觉惯性slam,什么样的运动使系统可观性退化，什么样的运动使其可观性增强？
 
+①以(几乎)恒定的加速度直线或者是转圈，都会使得尺度不可观
+
+②无旋转的运动，全局方向的所有3自由度均不可观
+
+【todo！！！！】证明部分还有一点模糊
+
+
 参考论文：[VINS on Wheels]([https://www.sci-hub.se/10.1007/978-3-642-00196-3_43](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7989603))
+
+本文时使用轮式里程计和平面假设来缓解上述问题
+
+（2）可观性分析手段
+
+1）局部可观性矩阵local observability matrix
+
+（可能有偏颇的）定义：在有限时间步内，滤波器的状态向量可以通过m（滤波器状态估计状态）确定  
+
+![image](https://github.com/EveningLin/msckf_related/assets/110521494/301defcd-4aa8-4a80-819c-d38cdd60e59d)
+
+
+![image](https://github.com/EveningLin/msckf_related/assets/110521494/45efc573-93e5-42d3-989c-01186a729d34)
+
+![image](https://github.com/EveningLin/msckf_related/assets/110521494/b5fc1990-20ef-4433-af65-6c08cc24d8ee)
+系统在k到k+n-1的时间段内是局部可观察的，该时间段的局部可观察矩阵M为秩n是充分必要的
 
 
 #### 1.3.2 First Estimate Jacobian （FEJ）
