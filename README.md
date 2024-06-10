@@ -72,6 +72,7 @@ OCKF参考论文：[2012-TR: Observability-constrained Vision-aided Inertial Nav
 ![image](https://github.com/EveningLin/msckf_related/assets/110521494/45efc573-93e5-42d3-989c-01186a729d34)
 
 ![image](https://github.com/EveningLin/msckf_related/assets/110521494/b5fc1990-20ef-4433-af65-6c08cc24d8ee)
+
 系统在k到k+n-1的时间段内是局部可观察的，该时间段的局部可观察矩阵M为秩n是充分必要的
 
 
