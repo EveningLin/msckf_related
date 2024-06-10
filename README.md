@@ -76,5 +76,9 @@ OCKF参考论文：[2012-TR: Observability-constrained Vision-aided Inertial Nav
 
 
 #### 1.3.2 First Estimate Jacobian （FEJ）
+![image](https://github.com/EveningLin/msckf_related/assets/110521494/f4713f30-c67b-404a-854b-9fac90faef1f)
+
+【todo！！！】为什么要做这两步替换？为什么能保证自由度无偏移？
+证明来自[Genearalized analysis and improvement of the consistency for EKF-based SLAM](https://people.csail.mit.edu/ghuang/paper/tr/TR_slam_genconsistency.pdf)
 
 
