@@ -37,7 +37,8 @@ _更新阶段_
 
 ### 1.3 可观性修正
 可观性修正有两种不同的和新方法，分别是FEJ和OCKF
-FEJ参考论文
+FEJ参考论文：[A  First-Estimates Jacobian EKF for Improving
+ SLAM Consistency](https://www.sci-hub.se/10.1007/978-3-642-00196-3_43)
 OCKF参考论文：[2012-TR: Observability-constrained Vision-aided Inertial Navigation]()
 #### 1.3.1 前置知识
 （1）可观性
@@ -48,6 +49,7 @@ OCKF参考论文：[2012-TR: Observability-constrained Vision-aided Inertial Nav
 
 【延申】对于视觉惯性slam,什么样的运动使系统可观性退化，什么样的运动使其可观性增强？
 
+参考论文：[VINS on Wheels]([https://www.sci-hub.se/10.1007/978-3-642-00196-3_43](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7989603))
 
 
 #### 1.3.2 First Estimate Jacobian （FEJ）
